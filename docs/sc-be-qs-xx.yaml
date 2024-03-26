@@ -1,0 +1,222 @@
+openapi: 3.0.3
+info:
+  title: Sustainability Companion App - API specification
+  description: BackEnd für den Q-Summit Hackathon // Exxeta AG.
+  version: 0.0.1
+servers:
+  - url: 'https://sc.domain.com'
+tags:
+  - name: user
+  - name: trip
+
+paths:
+  /users:
+    post:
+      tags:
+        - user
+      summary: Create a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          $ref: "#/components/responses/SuccessfullyCreated"
+        '400':
+          $ref: "#/components/responses/BadRequest"
+        '404':
+          $ref: "#/components/responses/NotFound"
+
+  /trips:
+    get:
+      tags:
+        - trip
+      summary: Get all trips
+      parameters:
+        - name: user
+          in: query
+          schema:
+            type: string
+            format: uuid
+          required: false
+          description: The UUID of the user to filter trips by.
+        - name: group
+          in: query
+          schema:
+            type: string
+            format: uuid
+          required: false
+          description: The UUID of the group to filter trips by.
+        - name: vehicle_type
+          in: query
+          schema:
+            $ref: "#/components/schemas/vehicle_type"
+          required: false
+          description: The type of vehicle to filter trips by.
+      responses:
+        '200':
+          $ref: "#/components/responses/Ok"
+        '400':
+          $ref: "#/components/responses/BadRequest"
+        '404':
+          $ref: "#/components/responses/NotFound"
+    post:
+      tags:
+        - trip
+      summary: Create a new trip
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Trip"
+      responses:
+        '201':
+          $ref: "#/components/responses/SuccessfullyCreated"
+        '400':
+          $ref: "#/components/responses/BadRequest"
+        '404':
+          $ref: "#/components/responses/NotFound"
+  /trips/{id}:
+    get:
+      tags:
+        - trip
+      summary: Get a trip by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          $ref: "#/components/responses/Ok"
+        '400':
+          $ref: "#/components/responses/BadRequest"
+        '404':
+          $ref: "#/components/responses/NotFound"
+    put:
+      tags:
+        - trip
+      summary: Update a trip by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Trip'
+      responses:
+        '200':
+          $ref: "#/components/responses/Ok"
+        '400':
+          $ref: "#/components/responses/BadRequest"
+        '404':
+          $ref: "#/components/responses/NotFound"
+    delete:
+      tags:
+        - trip
+      summary: Delete a trip by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '204':
+          description: No Content
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        username:
+          type: string
+          description: name of the user
+      required:
+        - username
+
+    Trip:
+      type: object
+      properties:
+        uuid:
+          type: string
+          format: uuid
+        username_who_drove:
+          $ref: "#/components/schemas/User"
+        geolocation_from:
+          type: string
+        geolocation_to:
+          type: string
+        vehicle_type:
+          $ref: "#/components/schemas/vehicle_type"
+        co2emission:
+          type: number
+        trips:
+          type: array
+          items:
+            $ref: "#/components/schemas/Trip"
+      required:
+        - geolocation_from
+        - geolocation_to
+
+    vehicle_type:
+      type: string
+      default: CAR_BENZIN
+      enum:
+        - WALK
+        - BIKE
+        - BIKE_ELECTRIC
+        - CAR_DIESEL
+        - CAR_BENZIN
+        - CAR_ELECTRIC
+        - TRAIN
+        - AIRPLANE
+        - MIXED
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: number
+        message:
+          type: string
+      required:
+        - code
+        - message
+
+  responses:
+    Ok:
+      description: Ok
+
+    SuccessfullyCreated:
+      description: The object was successfully created
+
+    BadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    NotFound:
+      description: The resource with the given argument was not found.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+
+
