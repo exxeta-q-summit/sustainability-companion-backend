@@ -4,25 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80375206-bb88-4bc6-b132-0ebd417ff9f6" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sc_be_qs_xx.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/carbon/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/domain/User.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/domain/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/presentation/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/presentation/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sc_be_qs_xx/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sc_be_qs_xx/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sc_be_qs_xx/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sc_be_qs_xx/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sc_be_qs_xx/wsgi.py" afterDir="false" />
+    <list default="true" id="80375206-bb88-4bc6-b132-0ebd417ff9f6" name="Changes" comment="init(project): django unchained">
+      <change afterPath="$PROJECT_DIR$/companion/Application/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/Application/profile_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/domain/Profile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/domain/serializers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/domain/serializers/profile_serializer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/domain/vehicle_types.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/infrastructure/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/infrastructure/profile_repository.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/presentation/homepage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/presentation/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/presentation/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/presentation/urls_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/companion/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/companion/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/presentation/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/companion/presentation/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sc_be_qs_xx/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sc_be_qs_xx/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sc_be_qs_xx/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sc_be_qs_xx/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +35,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -56,10 +57,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "Django Server.sc_be_qs_xx.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/mago2/PycharmProjects/sc_be_qs_xx",
     "node.js.detected.package.eslint": "true",
@@ -67,12 +70,18 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/companion/domain" />
+      <recent name="$PROJECT_DIR$/companion" />
+      <recent name="$PROJECT_DIR$/companion/domain/enitity" />
     </key>
   </component>
   <component name="RunManager">
@@ -117,7 +126,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711444343739</updated>
-      <workItem from="1711444347452" duration="1610000" />
+      <workItem from="1711444347452" duration="9801000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -127,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711445626247</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="init(project): django unchained">
+      <option name="closed" value="true" />
+      <created>1711446191049</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1711446191049</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +163,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="init(project): django unchained" />
+    <option name="LAST_COMMIT_MESSAGE" value="init(project): django unchained" />
   </component>
 </project>

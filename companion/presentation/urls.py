@@ -1,8 +1,10 @@
-from django.urls import path
+from django.urls import path, include
 
+from companion.presentation.homepage import HomepageView, HomepageApi
 
 urlpatterns = [
-    # path('', HomepageView.index, name='home'),
+    path('', HomepageView.index, name='home'),
+    path('api/', HomepageApi.index),                    #include('companion.presentation.urls_api'))
     # path('<int:page>/', HomepageView.index),
     #
     # path('post/<int:post_id>/', PostView.post, name='post'),

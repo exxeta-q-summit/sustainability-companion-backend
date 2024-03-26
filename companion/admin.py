@@ -1,4 +1,4 @@
 from django.contrib import admin
-from companion.domain.User import User
+from companion.domain.Profile import Profile
 
-admin.site.register(User)
+admin.site.register(Profile)
