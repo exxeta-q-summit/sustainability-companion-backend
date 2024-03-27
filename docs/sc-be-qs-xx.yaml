@@ -171,9 +171,8 @@ components:
           items:
             $ref: "#/components/schemas/Trip"
       required:
-        - geolocation_from
-        - geolocation_to
-
+        - start
+        - destination
     vehicle_type:
       type: string
       default: CAR_BENZIN
