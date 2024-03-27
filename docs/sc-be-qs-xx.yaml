@@ -6,7 +6,7 @@ info:
 servers:
   - url: 'https://sc.domain.com'
 tags:
-  - name: user
+  - name: profile
   - name: trip
 
 paths:
