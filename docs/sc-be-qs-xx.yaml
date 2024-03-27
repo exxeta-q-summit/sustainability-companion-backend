@@ -57,7 +57,13 @@ paths:
           description: The type of vehicle to filter trips by.
       responses:
         '200':
-          $ref: "#/components/responses/Ok"
+          description: Ok
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Trip"
         '400':
           $ref: "#/components/responses/BadRequest"
         '404':
@@ -153,18 +159,18 @@ components:
     Trip:
       type: object
       properties:
-        uuid:
+        id:
           type: string
           format: uuid
-        username_who_drove:
+        username:
           $ref: "#/components/schemas/User"
-        geolocation_from:
+        start:
           type: string
-        geolocation_to:
+        destination:
           type: string
         vehicle_type:
           $ref: "#/components/schemas/vehicle_type"
-        co2emission:
+        co2_emissions:
           type: number
         trips:
           type: array
@@ -183,7 +189,8 @@ components:
         - CAR_DIESEL
         - CAR_BENZIN
         - CAR_ELECTRIC
-        - TRAIN
+        - TRAIN_SHORT
+        - TRAIN_LONG
         - AIRPLANE
         - MIXED
 

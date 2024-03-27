@@ -27,9 +27,23 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '192.168.0.1',  # for local development
     '192.168.0.1',  # for local development
-    '127.0.0.1',    # for local development
-    'localhost',    # for local development
+    '127.0.0.1',  # for local development
+    'localhost',  # for local development
 ]
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000'
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 
 # Application definition
 
@@ -40,6 +54,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "corsheaders",
+    'rest_framework',
     "companion.apps.CompanionConfig",
     "carbon.apps.CarbonConfig"
 ]
@@ -52,6 +68,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
 ]
 
 ROOT_URLCONF = 'sc_be_qs_xx.urls'

@@ -4,25 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80375206-bb88-4bc6-b132-0ebd417ff9f6" name="Changes" comment="init(project): django unchained">
-      <change afterPath="$PROJECT_DIR$/companion/Application/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/Application/profile_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/domain/Profile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/domain/serializers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/domain/serializers/profile_serializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/domain/vehicle_types.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/infrastructure/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/infrastructure/profile_repository.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/presentation/homepage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/presentation/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/presentation/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/companion/presentation/urls_api.py" afterDir="false" />
+    <list default="true" id="80375206-bb88-4bc6-b132-0ebd417ff9f6" name="Changes" comment="chore(project): gitignore">
+      <change afterPath="$PROJECT_DIR$/companion/domain/serializers/trip_serializer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/domain/trip.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/presentation/api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/presentation/api/trip_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/presentation/api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/presentation/api/user_controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/trip.http" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sc_be_qs_xx.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sc_be_qs_xx.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/Application/profile_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/companion/Application/profile_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/companion/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/companion/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/companion/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/companion/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/domain/Profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/companion/domain/profile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/domain/serializers/profile_serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/companion/domain/serializers/profile_serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/domain/vehicle_types.py" beforeDir="false" afterPath="$PROJECT_DIR$/companion/domain/vehicle_types.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/infrastructure/profile_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/companion/infrastructure/profile_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/presentation/homepage.py" beforeDir="false" afterPath="$PROJECT_DIR$/companion/presentation/homepage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/presentation/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/companion/presentation/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/companion/presentation/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/companion/presentation/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/presentation/urls_api.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/companion/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sc-be-qs-xx.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sc-be-qs-xx.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sc_be_qs_xx/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sc_be_qs_xx/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sc_be_qs_xx/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/sc_be_qs_xx/urls.py" afterDir="false" />
+    </list>
+    <list id="afb6ef48-cbe4-4b76-9627-81dde5a10ec4" name="Changes by made4" comment="Changes by made4">
+      <change afterPath="$PROJECT_DIR$/companion/Application/trip_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/companion/infrastructure/trip_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sc-be-qs-xx.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/sc-be-qs-xx.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,18 +52,33 @@
       <list>
         <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTTP Request" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/docs/sc-be-qs-xx.yaml">
+      <ranges>
+        <range start1="59" end1="60" start2="59" end2="66" changelist="80375206-bb88-4bc6-b132-0ebd417ff9f6" />
+        <range start1="155" end1="156" start2="161" end2="162" changelist="80375206-bb88-4bc6-b132-0ebd417ff9f6" />
+        <range start1="158" end1="159" start2="164" end2="165" changelist="80375206-bb88-4bc6-b132-0ebd417ff9f6" />
+        <range start1="160" end1="161" start2="166" end2="167" changelist="80375206-bb88-4bc6-b132-0ebd417ff9f6" />
+        <range start1="162" end1="163" start2="168" end2="169" changelist="80375206-bb88-4bc6-b132-0ebd417ff9f6" />
+        <range start1="166" end1="167" start2="172" end2="173" changelist="80375206-bb88-4bc6-b132-0ebd417ff9f6" />
+        <range start1="173" end1="176" start2="179" end2="181" changelist="afb6ef48-cbe4-4b76-9627-81dde5a10ec4" />
+        <range start1="186" end1="187" start2="191" end2="193" changelist="80375206-bb88-4bc6-b132-0ebd417ff9f6" />
+      </ranges>
+    </file>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2eDg0ziRARENUVc3kR1bAkpPJJk" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -58,13 +88,19 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.sc_be_qs_xx.executor": "Run",
+    "Django Server.sc_be_qs_xx.executor": "Debug",
+    "HTTP Request.trip | #1.executor": "Run",
+    "HTTP Request.trip | Create a trip.executor": "Run",
+    "HTTP Request.trip | Delete a trip.executor": "Run",
+    "HTTP Request.trip | Get all trips.executor": "Run",
+    "HTTP Request.trip | Update a trip.executor": "Run",
     "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "ShowUsagesActions.previewPropertyKey": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/mago2/PycharmProjects/sc_be_qs_xx",
+    "last_opened_file_path": "/home/mago2/PycharmProjects/sc_be_qs_xx/db.sqlite3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,15 +112,32 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/companion/domain/serializers" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/companion/presentation/api" />
       <recent name="$PROJECT_DIR$/companion/domain" />
       <recent name="$PROJECT_DIR$/companion" />
       <recent name="$PROJECT_DIR$/companion/domain/enitity" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Django Server.sc_be_qs_xx">
+    <configuration name="trip | Create a trip" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/trip.http" index="3" requestIdentifier="Create a trip" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="trip | Delete a trip" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/trip.http" index="4" requestIdentifier="Delete a trip" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="trip | Get all trips" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/trip.http" index="2" requestIdentifier="Get all trips" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="trip | Update a trip" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/trip.http" index="4" requestIdentifier="Update a trip" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="trip | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/test/trip.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="sc_be_qs_xx" type="Python.DjangoServer" factoryName="Django server">
       <module name="sc_be_qs_xx" />
       <option name="ENV_FILES" value="" />
@@ -110,6 +163,15 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.trip | Update a trip" />
+        <item itemvalue="HTTP Request.trip | Get all trips" />
+        <item itemvalue="HTTP Request.trip | Create a trip" />
+        <item itemvalue="HTTP Request.trip | Delete a trip" />
+        <item itemvalue="HTTP Request.trip | #1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -126,7 +188,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1711444343739</updated>
-      <workItem from="1711444347452" duration="9801000" />
+      <workItem from="1711444347452" duration="9991000" />
+      <workItem from="1711462861498" duration="9615000" />
+      <workItem from="1711526913312" duration="12390000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -144,7 +208,23 @@
       <option name="project" value="LOCAL" />
       <updated>1711446191049</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat(setup): Profile model added&#10;&#10;with frontend and api REST setup">
+      <option name="closed" value="true" />
+      <created>1711459048822</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1711459048822</updated>
+    </task>
+    <task id="LOCAL-00004" summary="chore(project): gitignore">
+      <option name="closed" value="true" />
+      <created>1711527366145</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711527366145</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +244,20 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="init(project): django unchained" />
-    <option name="LAST_COMMIT_MESSAGE" value="init(project): django unchained" />
+    <MESSAGE value="feat(setup): Profile model added&#10;&#10;with frontend and api REST setup" />
+    <MESSAGE value="Changes by made4" />
+    <MESSAGE value="chore(project): gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore(project): gitignore" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/companion/Application/trip_service.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
