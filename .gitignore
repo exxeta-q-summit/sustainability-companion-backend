@@ -1,6 +1,6 @@
 /db.sqlite3
 .idea
-
+**/migrations
 
 #####################
 ### https://github.com/github/gitignore/blob/main/Python.gitignore
