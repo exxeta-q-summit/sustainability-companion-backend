@@ -10,8 +10,8 @@ class Trip(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     profile = models.ForeignKey(
         Profile,
-        on_delete=models.CASCADE,
-        default=None,
+        on_delete=models.CASCADE,       # ASK YOURSELF IF YOU WANT TO CASCADE DELETE.
+        default=None,                   # IT WILL DELETE ALL TRIPS OF A PROFILE WHEN THE PROFILE IS DELETED
         null=True
     )
     start = models.CharField(max_length=255)

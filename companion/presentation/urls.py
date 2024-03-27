@@ -1,6 +1,6 @@
 from django.urls import path, include
 
-from companion.presentation.homepage import HomepageView, HomepageApi
+from companion.presentation.homepage import HomepageView
 
 urlpatterns = [
     path('', HomepageView.index, name='home'),

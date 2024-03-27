@@ -1,0 +1,40 @@
+# Create a user
+POST localhost:8000/companion/api/users/
+Content-Type: application/json
+
+{
+    "username": "test"
+}
+
+### Get all trips
+GET localhost:8000/companion/api/trips/
+
+### Create a trip
+POST localhost:8000/companion/api/trips/
+Content-Type: application/json
+
+{
+    "profile": "marc",
+    "start": "Karlsruhe",
+    "destination": "Berlin",
+    "vehicle_type": "TRAIN_SHORT",
+    "co2_emissions": 10.00
+}
+
+### Update a trip
+PUT localhost:8000/companion/api/trips/
+Content-Type: application/json
+
+{
+    "id": "9f9474c9-5843-4f0b-8cf2-500ff3ad54a4",
+    "destination": "Stuttgart"
+}
+
+### Delete a trip
+DELETE localhost:8000/companion/api/trips/
+Content-Type: application/json
+
+{
+    "id": "9f9474c9-5843-4f0b-8cf2-500ff3ad54a4"
+}
+

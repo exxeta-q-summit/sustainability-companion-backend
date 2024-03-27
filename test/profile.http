@@ -1,0 +1,19 @@
+
+### Get all Profiles
+GET localhost:8000/companion/api/profiles/
+
+### Create a Profile
+POST localhost:8000/companion/api/profiles/
+Content-Type: application/json
+
+{
+  "username": "martin"
+}
+
+### Delete a Profile
+DELETE localhost:8000/companion/api/profiles/
+Content-Type: application/json
+
+{
+    "username": "martin"
+}

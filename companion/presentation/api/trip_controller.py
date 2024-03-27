@@ -50,15 +50,14 @@ class TripApi(APIView):
             return Response(data=trip, status=status.HTTP_201_CREATED)
 
         except Exception as e:
-            return JsonResponse({
-                'code': 500,
+            return Response(data={
                 'note': 'Something when wrong! Make sure to include the following types',
                 'params': {
                     'required': ["username", "start", "destination", "vehicle_type"],
                     'optional': ["co2_emissions"]
                 },
                 'message': str(e)
-            })
+            }, status=status.HTTP_400_BAD_REQUEST)
 
     @classmethod
     def put(cls, request):
