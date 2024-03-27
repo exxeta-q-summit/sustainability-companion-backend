@@ -2,7 +2,7 @@ from django.db.models import QuerySet
 from django.db.models.signals import post_save, pre_delete
 from django.dispatch import receiver
 
-from companion.domain.Profile import Profile
+from companion.domain.profile import Profile
 
 
 class ProfileRepository:
@@ -13,7 +13,7 @@ class ProfileRepository:
             return None
 
         return Profile.objects.create(
-            username=instance.username
+            username=instance.profile
         )
 
     @staticmethod
