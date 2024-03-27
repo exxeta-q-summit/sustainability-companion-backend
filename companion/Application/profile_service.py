@@ -20,3 +20,6 @@ class ProfileService:
 
     def get_all_profiles(self, order_by: str = None) -> QuerySet:
         return self.profile_repository.get_all(order_by=order_by)
+
+    def delete_by_username(self, username):
+        self.get_profile_by_username(username).delete()
