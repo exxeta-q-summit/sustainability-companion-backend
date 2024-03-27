@@ -2,8 +2,16 @@
 
 {% block main_body %}
 
+    <h1>Profiles</h1>
     {% for profile in all_users %}
         <p>{{ profile.username }}</p>
+    {% endfor %}
+
+    <br>
+
+    <h1>Trips</h1>
+    {% for trip in all_trips %}
+        <p>{{ trip }}</p>
     {% endfor %}
 
 {% endblock %}

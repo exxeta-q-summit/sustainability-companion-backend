@@ -10,8 +10,8 @@ class CompanionConfig(AppConfig):
 
         from django.db.models.signals import post_save
         from django.db.models.signals import pre_delete
-        from companion.domain.Profile import Profile
-        from companion.domain.Trip import Trip
+        from companion.domain.profile import Profile
+        from companion.domain.trip import Trip
         from companion.infrastructure.profile_repository import ProfileRepository
         from companion.infrastructure.trip_repository import TripRepository
 

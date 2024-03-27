@@ -4,7 +4,13 @@ from django.db import models
 
 
 class Profile(models.Model):
-    username = models.CharField(max_length=255)
+    username = models.CharField(
+        primary_key=True,
+        max_length=255,
+        null=False,
+        blank=False,
+        unique=True
+    )
 
     ###
     # If you want to have a real user with authentication and so on,
