@@ -15,22 +15,8 @@ class Calculator:
         :return: CO2 emission in grams
         """
 
-        if occupancy is None:
-            occupancy = vehicle.max_occupancy or 1
+        occupancy = max(occupancy, vehicle.default_occupancy)
 
-        co2_emission = vehicle.co2_emission_per_km * distance_in_km / occupancy
+        co2_emission = vehicle.co2_emission_in_g_per_km * distance_in_km / occupancy
 
-        return co2_emission
-
-    @staticmethod
-    def complex(distance: float, consumption_per_km: float, occupancy: int = None) -> float:
-        """
-        Calculate CO2 emission based on the given parameters
-        :param distance: distance in kilometers
-        :param consumption_per_km: consumption per kilometer
-        :param occupancy: number of passengers
-        :return: CO2 emission in grams
-        """
-
-        co2_emission = consumption_per_km * distance / occupancy
         return co2_emission

@@ -1,0 +1,3 @@
+### Enterprise End-to-End test:
+
+GET localhost:8000/carbon/api/basic/?km=100&vehicle_type=BIKE&occupancy=1

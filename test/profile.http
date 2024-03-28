@@ -7,7 +7,7 @@ POST localhost:8000/companion/api/profiles/
 Content-Type: application/json
 
 {
-  "username": "martin"
+  "username": "Josip"
 }
 
 ### Delete a Profile
@@ -15,5 +15,5 @@ DELETE localhost:8000/companion/api/profiles/
 Content-Type: application/json
 
 {
-    "username": "martin"
+    "username": "Josip"
 }
