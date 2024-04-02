@@ -29,6 +29,7 @@ ALLOWED_HOSTS = [
     '192.168.0.1',  # for local development
     '127.0.0.1',  # for local development
     'localhost',  # for local development
+    'companion-backend.azurewebsites.net'  # for deployment
 ]
 
 CSRF_TRUSTED_ORIGINS = [
